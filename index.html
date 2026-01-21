@@ -6,18 +6,10 @@
     <title>IA Pratique - Maîtrise l'IA et gagne de l'argent en 24h</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        .pulse-btn { animation: pulse 2s infinite; }
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
-            50% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
-        }
-        .sticky-cta { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .tab-content{display:none}.tab-content.active{display:block}
+        .hover-lift{transition:all .3s}.hover-lift:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.15)}
+        .pulse-btn{animation:pulse 2s infinite}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(59,130,246,.7)}50%{box-shadow:0 0 0 10px rgba(59,130,246,0)}}
+        .sticky-cta{position:fixed;bottom:20px;right:20px;z-index:1000}
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
@@ -32,9 +24,7 @@
         <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
             <div class="flex items-center gap-4">
                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/>
-                    </svg>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/></svg>
                 </div>
                 <div>
                     <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">IA Pratique</h1>
@@ -45,236 +35,15 @@
 
         <!-- Navigation -->
         <div class="flex flex-wrap gap-2 mb-6">
-            <button onclick="showTab('accueil')" class="nav-btn active flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
-                🏠 <span class="hidden sm:inline">Accueil</span>
-            </button>
-            <button onclick="showTab('top10')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
-                ⭐ <span class="hidden sm:inline">Top 10 IA</span>
-            </button>
-            <button onclick="showTab('commander')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
-                💳 <span class="hidden sm:inline">Commander</span>
-            </button>
-            <button onclick="showTab('exemples')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
-                📂 <span class="hidden sm:inline">Exemples</span>
-            </button>
-            <button onclick="showTab('faq')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
-                ❓ <span class="hidden sm:inline">FAQ</span>
-            </button>
+            <button onclick="showTab('accueil')" class="nav-btn active">🏠 <span class="hidden sm:inline">Accueil</span></button>
+            <button onclick="showTab('top10')" class="nav-btn">⭐ <span class="hidden sm:inline">Top 10 IA</span></button>
+            <button onclick="showTab('commander')" class="nav-btn">💳 <span class="hidden sm:inline">Commander</span></button>
+            <button onclick="showTab('exemples')" class="nav-btn">📂 <span class="hidden sm:inline">Exemples</span></button>
+            <button onclick="showTab('faq')" class="nav-btn">❓ <span class="hidden sm:inline">FAQ</span></button>
         </div>
 
         <!-- Content -->
-        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-            
-            <!-- ACCUEIL -->
-            <div id="tab-accueil" class="tab-content active space-y-8">
-                <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">L'IA gratuite qui te fait gagner de l'argent en 24h</h2>
-                    <p class="text-xl text-gray-600 mb-6">Zéro compétence. Zéro investissement. Que du concret.</p>
-                    <button onclick="showTab('commander')" class="pulse-btn bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all">
-                        🚀 Commander maintenant - Offre 8€
-                    </button>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="hover-lift bg-green-50 rounded-xl p-6 text-center border-2 border-green-200">
-                        <div class="text-5xl mb-4">⚡</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Livraison 24h</h3>
-                        <p class="text-gray-700 mb-4">Ton article prêt demain</p>
-                        <button onclick="showTab('commander')" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">Commander</button>
-                    </div>
-                    <div class="hover-lift bg-purple-50 rounded-xl p-6 text-center border-2 border-purple-200">
-                        <div class="text-5xl mb-4">💎</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Qualité Pro</h3>
-                        <p class="text-gray-700 mb-4">Contenu optimisé IA</p>
-                        <button onclick="showTab('exemples')" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-700">Voir exemples</button>
-                    </div>
-                    <div class="hover-lift bg-blue-50 rounded-xl p-6 text-center border-2 border-blue-200">
-                        <div class="text-5xl mb-4">🎯</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Prix Mini</h3>
-                        <p class="text-gray-700 mb-4">8€ aujourd'hui seulement</p>
-                        <button onclick="showTab('commander')" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700">Profiter</button>
-                    </div>
-                </div>
-
-                <!-- Lead Magnet -->
-                <div class="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl p-8 text-center border-2 border-yellow-300">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">🎁 GRATUIT : Guide "Top 5 IA pour TikTok Viral"</h3>
-                    <p class="text-gray-700 mb-4">Reçois ton guide gratuit par email + astuces exclusives chaque semaine</p>
-                    <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                        <input type="email" placeholder="ton@email.com" id="newsletter-email" class="flex-1 px-4 py-3 border-2 border-yellow-400 rounded-lg">
-                        <button onclick="subscribeNewsletter()" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl">
-                            Recevoir le guide
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Témoignages -->
-                <div class="bg-gray-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">💬 Ils ont commandé</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
-                            <p class="text-gray-700 mb-2">"Article reçu en 18h, parfait pour mon blog IA !"</p>
-                            <p class="text-sm text-gray-500">- Thomas, créateur de contenu</p>
-                        </div>
-                        <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
-                            <p class="text-gray-700 mb-2">"Qualité pro à petit prix, je recommande !"</p>
-                            <p class="text-sm text-gray-500">- Sarah, freelance marketing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TOP 10 -->
-            <div id="tab-top10" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">Top 10 Outils IA Gratuits 2026</h2>
-                <div id="toolsList"></div>
-                <div class="text-center mt-8">
-                    <button onclick="showTab('commander')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl">
-                        💳 Besoin d'un guide personnalisé ? Commander maintenant
-                    </button>
-                </div>
-            </div>
-
-            <!-- COMMANDER -->
-            <div id="tab-commander" class="tab-content max-w-3xl mx-auto space-y-6">
-                <div class="text-center mb-8">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-3">💳 Commander un Service IA</h2>
-                    <p class="text-lg text-gray-600">Livraison 24-48h • Paiement PayPal sécurisé</p>
-                </div>
-
-                <div class="bg-red-50 border-2 border-red-300 rounded-xl p-6 text-center mb-6">
-                    <p class="text-2xl font-bold text-red-600 mb-2">🔥 OFFRE DU JOUR</p>
-                    <p class="text-lg text-gray-700">Article Simple : <span class="line-through">10€</span> <span class="text-3xl font-bold text-green-600">8€</span></p>
-                    <p class="text-sm text-gray-600">Valable aujourd'hui uniquement !</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-4 mb-8">
-                    <div class="hover-lift bg-blue-50 rounded-xl p-6 border-2 border-blue-300 text-center">
-                        <div class="text-3xl mb-2">📄</div>
-                        <h3 class="font-bold text-gray-800 mb-2">Article Simple</h3>
-                        <p class="text-sm line-through text-gray-500 mb-1">10€</p>
-                        <p class="text-3xl font-bold text-green-600 mb-2">8€</p>
-                        <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 500-800 mots</li><li>✓ 24h</li><li>✓ 1 révision</li></ul>
-                        <button onclick="selectService('article')" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700">Choisir</button>
-                    </div>
-                    <div class="hover-lift bg-purple-50 rounded-xl p-6 border-2 border-purple-300 text-center">
-                        <div class="text-3xl mb-2">📚</div>
-                        <h3 class="font-bold text-gray-800 mb-2">Mini-Guide</h3>
-                        <p class="text-3xl font-bold text-purple-600 mb-2">25€</p>
-                        <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 1500-2000 mots</li><li>✓ 48h</li><li>✓ 2 révisions</li></ul>
-                        <button onclick="selectService('guide')" class="w-full bg-purple-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-700">Choisir</button>
-                    </div>
-                    <div class="hover-lift bg-green-50 rounded-xl p-6 border-2 border-green-300 text-center">
-                        <div class="text-3xl mb-2">🎯</div>
-                        <h3 class="font-bold text-gray-800 mb-2">Pack 5</h3>
-                        <p class="text-3xl font-bold text-green-600 mb-2">40€</p>
-                        <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 5 articles</li><li>✓ 72h</li><li>✓ Économie 10€</li></ul>
-                        <button onclick="selectService('pack')" class="w-full bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">Choisir</button>
-                    </div>
-                </div>
-
-                <form onsubmit="handleSubmit(event)" class="bg-gray-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">📝 Formulaire de commande</h3>
-                    <div class="space-y-4">
-                        <input type="text" required placeholder="Nom complet" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900" id="nom">
-                        <input type="email" required placeholder="Email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900" id="email">
-                        <select class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900" id="service">
-                            <option value="article">Article Simple - 8€ (OFFRE DU JOUR)</option>
-                            <option value="guide">Mini-Guide - 25€</option>
-                            <option value="pack">Pack 5 Articles - 40€</option>
-                        </select>
-                        <textarea required rows="4" placeholder="Description de ton projet (sujet, ton, public cible...)" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900" id="desc"></textarea>
-                        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-                            <p class="text-sm text-gray-700"><strong>✓ Livraison garantie :</strong> 24-48h max</p>
-                            <p class="text-sm text-gray-700"><strong>✓ Paiement sécurisé :</strong> PayPal</p>
-                            <p class="text-sm text-gray-700"><strong>✓ Satisfaction :</strong> 1 révision gratuite incluse</p>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl">
-                            💳 Confirmer et payer avec PayPal
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <!-- EXEMPLES -->
-            <div id="tab-exemples" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">📂 Exemples de Travaux</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="hover-lift bg-white border-2 border-purple-200 rounded-xl p-6">
-                        <div class="bg-purple-100 rounded-lg p-4 mb-4">
-                            <h3 class="font-bold text-gray-800 mb-2">Article Blog - IA Marketing</h3>
-                            <p class="text-sm text-gray-600">800 mots • Livré en 20h</p>
-                        </div>
-                        <p class="text-gray-700 mb-4">"Comment l'IA révolutionne le marketing digital en 2026 : 5 outils indispensables pour booster vos conversions..."</p>
-                        <div class="flex items-center gap-2 text-green-600">
-                            <span class="font-bold">Client satisfait ✓</span>
-                        </div>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-blue-200 rounded-xl p-6">
-                        <div class="bg-blue-100 rounded-lg p-4 mb-4">
-                            <h3 class="font-bold text-gray-800 mb-2">Guide TikTok - Contenu Viral</h3>
-                            <p class="text-sm text-gray-600">1500 mots • Livré en 36h</p>
-                        </div>
-                        <p class="text-gray-700 mb-4">"Stratégie complète pour créer du contenu TikTok viral avec l'IA : hooks, scripts, outils et calendrier de publication..."</p>
-                        <div class="flex items-center gap-2 text-green-600">
-                            <span class="font-bold">Client satisfait ✓</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-8">
-                    <button onclick="showTab('commander')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl">
-                        🚀 Commander mon article maintenant
-                    </button>
-                </div>
-            </div>
-
-            <!-- FAQ -->
-            <div id="tab-faq" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">❓ Questions Fréquentes</h2>
-                
-                <div class="space-y-4">
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">Je n'ai aucune compétence en IA, est-ce un problème ?</h3>
-                        <p class="text-gray-700">Absolument pas ! C'est justement mon travail. Tu me donnes le sujet, je crée l'article avec les meilleurs outils IA et tu reçois un contenu prêt à publier.</p>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">Combien de temps pour la livraison ?</h3>
-                        <p class="text-gray-700">Article simple : 24h max. Mini-guide : 48h max. Pack 5 : 72h max. Tu reçois ton contenu par email dès qu'il est prêt !</p>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">Le paiement est-il sécurisé ?</h3>
-                        <p class="text-gray-700">Oui ! Tous les paiements passent par PayPal, plateforme 100% sécurisée. Aucune donnée bancaire n'est stockée sur ce site.</p>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">Puis-je demander des modifications ?</h3>
-                        <p class="text-gray-700">Oui ! 1 révision gratuite incluse pour l'article simple, 2 révisions pour le guide. Je m'assure que tu sois 100% satisfait.</p>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">C'est vraiment créé avec l'IA ?</h3>
-                        <p class="text-gray-700">Oui ! J'utilise les meilleurs outils IA (ChatGPT, Claude, etc.) + mon expertise pour créer un contenu unique, optimisé et de qualité professionnelle.</p>
-                    </div>
-
-                    <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
-                        <h3 class="font-bold text-gray-800 text-lg mb-2">L'offre à 8€ est valable combien de temps ?</h3>
-                        <p class="text-gray-700">C'est une offre limitée valable aujourd'hui uniquement ! Demain le prix revient à 10€. Profites-en maintenant 🔥</p>
-                    </div>
-                </div>
-
-                <div class="text-center mt-8">
-                    <button onclick="showTab('commander')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl">
-                        💳 Commander maintenant - 8€
-                    </button>
-                </div>
-            </div>
-
-        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8" id="mainContent"></div>
 
         <!-- Footer -->
         <div class="mt-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white text-center">
@@ -291,53 +60,217 @@
 
     <script>
         const tools = [
-            { rank: 1, name: "ChatGPT", url: "https://chat.openai.com", logo: "🤖", atouts: ["Le plus polyvalent", "Interface simple", "Version gratuite puissante", "Création rapide"] },
-            { rank: 2, name: "Canva AI", url: "https://www.canva.com", logo: "🎨", atouts: ["Visuels pro", "Templates infinis", "Magic Design", "Réseaux sociaux"] },
-            { rank: 3, name: "Perplexity AI", url: "https://www.perplexity.ai", logo: "🔍", atouts: ["Recherche IA", "Citations sources", "Rapide", "Gratuit"] },
-            { rank: 4, name: "Claude AI", url: "https://claude.ai", logo: "💬", atouts: ["Compréhension contexte", "Textes longs", "Naturel", "PDF gratuit"] },
-            { rank: 5, name: "Notion AI", url: "https://www.notion.so", logo: "📝", atouts: ["Organisation", "Gestion projets", "Amélioration textes", "Freelances"] },
-            { rank: 6, name: "Microsoft Copilot", url: "https://copilot.microsoft.com", logo: "🔷", atouts: ["Windows/Edge", "GPT-4 gratuit", "Images DALL-E", "Recherche"] },
-            { rank: 7, name: "Gemini", url: "https://gemini.google.com", logo: "✨", atouts: ["Google Search", "Multimodal", "Gratuit", "Écosystème Google"] },
-            { rank: 8, name: "Writesonic", url: "https://writesonic.com", logo: "✍️", atouts: ["Marketing", "SEO", "Templates", "Gratuit"] },
-            { rank: 9, name: "Copy.ai", url: "https://www.copy.ai", logo: "📄", atouts: ["Réseaux sociaux", "Produits", "Emails", "2000 mots/mots"] },
-            { rank: 10, name: "Runway ML", url: "https://runwayml.com", logo: "🎬", atouts: ["Vidéo IA", "Texte→Vidéo", "Effets auto", "Gratuit"] }
+            {rank:1,name:"ChatGPT",url:"https://chat.openai.com",logo:"🤖",atouts:["Polyvalent","Simple","Gratuit","Rapide"]},
+            {rank:2,name:"Canva AI",url:"https://www.canva.com",logo:"🎨",atouts:["Visuels pro","Templates infinis","Magic Design","Réseaux"]},
+            {rank:3,name:"Perplexity",url:"https://www.perplexity.ai",logo:"🔍",atouts:["Recherche IA","Citations","Rapide","Gratuit"]},
+            {rank:4,name:"Claude AI",url:"https://claude.ai",logo:"💬",atouts:["Contexte","Textes longs","Naturel","PDF gratuit"]},
+            {rank:5,name:"Notion AI",url:"https://www.notion.so",logo:"📝",atouts:["Organisation","Projets","Textes","Freelances"]},
+            {rank:6,name:"Copilot",url:"https://copilot.microsoft.com",logo:"🔷",atouts:["Windows/Edge","GPT-4 gratuit","Images","Recherche"]},
+            {rank:7,name:"Gemini",url:"https://gemini.google.com",logo:"✨",atouts:["Google Search","Multimodal","Gratuit","Écosystème"]},
+            {rank:8,name:"Writesonic",url:"https://writesonic.com",logo:"✍️",atouts:["Marketing","SEO","Templates","Gratuit"]},
+            {rank:9,name:"Copy.ai",url:"https://www.copy.ai",logo:"📄",atouts:["Réseaux sociaux","Produits","Emails","2000 mots/mois"]},
+            {rank:10,name:"Runway",url:"https://runwayml.com",logo:"🎬",atouts:["Vidéo IA","Texte→Vidéo","Effets auto","Gratuit"]}
         ];
 
-        function renderTools() {
-            const container = document.getElementById('toolsList');
-            container.innerHTML = tools.map(t => `
-                <div class="hover-lift bg-gray-50 rounded-xl p-6 transition-all border-2 hover:border-purple-300 mb-4">
+        const pages = {
+            accueil: `
+                <div class="space-y-8">
+                    <div class="text-center">
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">L'IA gratuite qui te fait gagner de l'argent en 24h</h2>
+                        <p class="text-xl text-gray-600 mb-6">Zéro compétence. Zéro investissement. Que du concret.</p>
+                        <button onclick="showTab('commander')" class="pulse-btn bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl">🚀 Commander maintenant - Offre 8€</button>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="hover-lift bg-green-50 rounded-xl p-6 text-center border-2 border-green-200">
+                            <div class="text-5xl mb-4">⚡</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Livraison 24h</h3>
+                            <p class="text-gray-700 mb-4">Ton article prêt demain</p>
+                            <button onclick="showTab('commander')" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">Commander</button>
+                        </div>
+                        <div class="hover-lift bg-purple-50 rounded-xl p-6 text-center border-2 border-purple-200">
+                            <div class="text-5xl mb-4">💎</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Qualité Pro</h3>
+                            <p class="text-gray-700 mb-4">Contenu optimisé IA</p>
+                            <button onclick="showTab('exemples')" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-700">Voir exemples</button>
+                        </div>
+                        <div class="hover-lift bg-blue-50 rounded-xl p-6 text-center border-2 border-blue-200">
+                            <div class="text-5xl mb-4">🎯</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Prix Mini</h3>
+                            <p class="text-gray-700 mb-4">8€ aujourd'hui seulement</p>
+                            <button onclick="showTab('commander')" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-blue-700">Profiter</button>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-xl p-8 text-center border-2 border-yellow-300">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">🎁 GRATUIT : Guide "Top 5 IA pour TikTok Viral"</h3>
+                        <p class="text-gray-700 mb-4">Reçois ton guide gratuit par email + astuces exclusives</p>
+                        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                            <input type="email" placeholder="ton@email.com" id="newsletter-email" class="flex-1 px-4 py-3 border-2 border-yellow-400 rounded-lg">
+                            <button onclick="subscribeNewsletter()" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-bold">Recevoir</button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 text-center mb-6">💬 Ils ont commandé</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
+                                <p class="text-gray-700 mb-2">"Article reçu en 18h, parfait !"</p>
+                                <p class="text-sm text-gray-500">- Thomas</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 border-l-4 border-blue-500">
+                                <p class="text-gray-700 mb-2">"Qualité pro à petit prix !"</p>
+                                <p class="text-sm text-gray-500">- Sarah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
+            top10: '<h2 class="text-4xl font-bold text-gray-800 text-center mb-6">Top 10 Outils IA Gratuits 2026</h2><div id="toolsList"></div><div class="text-center mt-8"><button onclick="showTab(\'commander\')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg">💳 Besoin d\'un guide ? Commander</button></div>',
+            commander: `
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl font-bold text-gray-800 mb-3">💳 Commander un Service IA</h2>
+                        <p class="text-lg text-gray-600">Livraison 24-48h • PayPal sécurisé</p>
+                    </div>
+                    <div class="bg-red-50 border-2 border-red-300 rounded-xl p-6 text-center mb-6">
+                        <p class="text-2xl font-bold text-red-600 mb-2">🔥 OFFRE DU JOUR</p>
+                        <p class="text-lg text-gray-700">Article Simple : <span class="line-through">10€</span> <span class="text-3xl font-bold text-green-600">8€</span></p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4 mb-8">
+                        <div class="hover-lift bg-blue-50 rounded-xl p-6 border-2 border-blue-300 text-center">
+                            <div class="text-3xl mb-2">📄</div>
+                            <h3 class="font-bold mb-2">Article</h3>
+                            <p class="text-3xl font-bold text-green-600 mb-2">8€</p>
+                            <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 500-800 mots</li><li>✓ 24h</li></ul>
+                        </div>
+                        <div class="hover-lift bg-purple-50 rounded-xl p-6 border-2 border-purple-300 text-center">
+                            <div class="text-3xl mb-2">📚</div>
+                            <h3 class="font-bold mb-2">Guide</h3>
+                            <p class="text-3xl font-bold text-purple-600 mb-2">25€</p>
+                            <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 1500-2000 mots</li><li>✓ 48h</li></ul>
+                        </div>
+                        <div class="hover-lift bg-green-50 rounded-xl p-6 border-2 border-green-300 text-center">
+                            <div class="text-3xl mb-2">🎯</div>
+                            <h3 class="font-bold mb-2">Pack 5</h3>
+                            <p class="text-3xl font-bold text-green-600 mb-2">40€</p>
+                            <ul class="text-sm text-left space-y-1 mb-4"><li>✓ 5 articles</li><li>✓ 72h</li></ul>
+                        </div>
+                    </div>
+                    <form onsubmit="handleSubmit(event)" class="bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">📝 Formulaire</h3>
+                        <div class="space-y-4">
+                            <input type="text" required placeholder="Nom" class="w-full px-4 py-3 border-2 rounded-lg" id="nom">
+                            <input type="email" required placeholder="Email" class="w-full px-4 py-3 border-2 rounded-lg" id="email">
+                            <select class="w-full px-4 py-3 border-2 rounded-lg" id="service">
+                                <option>Article - 8€ (OFFRE)</option>
+                                <option>Guide - 25€</option>
+                                <option>Pack 5 - 40€</option>
+                            </select>
+                            <textarea required rows="4" placeholder="Description..." class="w-full px-4 py-3 border-2 rounded-lg" id="desc"></textarea>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded text-sm">
+                                <p>✓ Livraison 24-48h • ✓ PayPal sécurisé • ✓ 1 révision gratuite</p>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-bold text-lg">💳 Payer avec PayPal</button>
+                        </div>
+                    </form>
+                </div>
+            `,
+            exemples: `
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">📂 Exemples de Travaux</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="hover-lift bg-white border-2 border-purple-200 rounded-xl p-6">
+                            <div class="bg-purple-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-gray-800">Article Blog - IA Marketing</h3>
+                                <p class="text-sm text-gray-600">800 mots • 20h</p>
+                            </div>
+                            <p class="text-gray-700 mb-4">"Comment l'IA révolutionne le marketing digital en 2026..."</p>
+                            <span class="text-green-600 font-bold">Client satisfait ✓</span>
+                        </div>
+                        <div class="hover-lift bg-white border-2 border-blue-200 rounded-xl p-6">
+                            <div class="bg-blue-100 rounded-lg p-4 mb-4">
+                                <h3 class="font-bold text-gray-800">Guide TikTok Viral</h3>
+                                <p class="text-sm text-gray-600">1500 mots • 36h</p>
+                            </div>
+                            <p class="text-gray-700 mb-4">"Stratégie complète pour TikTok viral avec l'IA..."</p>
+                            <span class="text-green-600 font-bold">Client satisfait ✓</span>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <button onclick="showTab('commander')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg">🚀 Commander maintenant</button>
+                    </div>
+                </div>
+            `,
+            faq: `
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">❓ Questions Fréquentes</h2>
+                    <div class="space-y-4">
+                        <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2">Je n'ai aucune compétence en IA, problème ?</h3>
+                            <p class="text-gray-700">Non ! Tu donnes le sujet, je crée l'article avec les meilleurs outils IA.</p>
+                        </div>
+                        <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2">Délai de livraison ?</h3>
+                            <p class="text-gray-700">Article : 24h. Guide : 48h. Pack 5 : 72h max.</p>
+                        </div>
+                        <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2">Paiement sécurisé ?</h3>
+                            <p class="text-gray-700">Oui ! Tous les paiements via PayPal 100% sécurisé.</p>
+                        </div>
+                        <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2">Modifications possibles ?</h3>
+                            <p class="text-gray-700">Oui ! 1 révision gratuite incluse (2 pour le guide).</p>
+                        </div>
+                        <div class="hover-lift bg-white border-2 border-gray-200 rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-2">Offre 8€ valable combien de temps ?</h3>
+                            <p class="text-gray-700">Aujourd'hui uniquement ! Demain retour à 10€ 🔥</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <button onclick="showTab('commander')" class="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg">💳 Commander - 8€</button>
+                    </div>
+                </div>
+            `
+        };
+
+        function renderTools(){
+            document.getElementById('toolsList').innerHTML=tools.map(t=>`
+                <div class="hover-lift bg-gray-50 rounded-xl p-6 border-2 hover:border-purple-300 mb-4">
                     <div class="flex gap-4 flex-wrap">
                         <div class="flex items-center gap-3">
-                            <div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg">${t.rank}</div>
+                            <div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center">${t.rank}</div>
                             <div class="text-5xl">${t.logo}</div>
                         </div>
                         <div class="flex-1">
-                            <a href="${t.url}" target="_blank" class="text-2xl font-bold text-gray-800 hover:text-purple-600 inline-flex items-center gap-2 transition-colors">
-                                ${t.name} 
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a>
+                            <a href="${t.url}" target="_blank" class="text-2xl font-bold text-gray-800 hover:text-purple-600">${t.name} ↗</a>
                             <div class="grid md:grid-cols-2 gap-2 mt-3 mb-4">
-                                ${t.atouts.map(a => `<div class="flex gap-2"><span class="text-purple-500 font-bold">✓</span><span class="text-sm text-gray-700">${a}</span></div>`).join('')}
+                                ${t.atouts.map(a=>`<div class="flex gap-2"><span class="text-purple-500">✓</span><span class="text-sm text-gray-700">${a}</span></div>`).join('')}
                             </div>
-                            <a href="${t.url}" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all">
-                                Essayer maintenant
-                            </a>
+                            <a href="${t.url}" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium">Essayer</a>
                         </div>
                     </div>
                 </div>
             `).join('');
         }
 
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(b => {
-                b.classList.remove('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white', 'shadow-lg');
-                b.classList.add('bg-white', 'text-gray-700', 'hover:shadow-md');
+        function showTab(tab){
+            document.getElementById('mainContent').innerHTML=pages[tab];
+            document.querySelectorAll('.nav-btn').forEach((b,i)=>{
+                b.className='nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all '+(i===Object.keys(pages).indexOf(tab)?'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg':'bg-white text-gray-700 hover:shadow-md');
             });
-            document.getElementById('tab-' + tabName).classList.add('active');
-            const clickedBtn = event ? event.target.closest('.nav-btn')
+            if(tab==='top10')renderTools();
+            window.scrollTo({top:0,behavior:'smooth'});
+        }
+
+        function handleSubmit(e){
+            e.preventDefault();
+            alert('Commande envoyée à '+document.getElementById('email').value+' ! Redirection PayPal...');
+        }
+
+        function subscribeNewsletter(){
+            const email=document.getElementById('newsletter-email').value;
+            if(email)alert('Guide envoyé à '+email+' ! Vérifie ta boite mail 📧');
+        }
+
+        showTab('accueil');
+    </script>
+</body>
+</html>
