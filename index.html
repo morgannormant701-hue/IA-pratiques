@@ -12,81 +12,76 @@
         .tab-content.active { display: block; }
     </style>
 </head>
-<body class="min-h-screen transition-colors duration-300" id="mainBody">
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
     <div class="max-w-6xl mx-auto p-4">
         
         <!-- Header -->
-        <div class="rounded-2xl shadow-xl p-6 mb-6 transition-colors duration-300" id="header">
-            <div class="flex items-center justify-between flex-wrap gap-4">
-                <div class="flex items-center gap-4">
-                    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">IA Pratique</h1>
-                        <p class="text-sm md:text-base" id="subtitle">Maîtrise l'IA et gagne de l'argent en 24h</p>
-                    </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-6">
+            <div class="flex items-center gap-4">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-xl">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z"/>
+                    </svg>
                 </div>
-                <button onclick="toggleDarkMode()" class="flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all" id="themeBtn">
-                    <span id="themeIcon">🌙</span> <span id="themeText">Dark</span>
-                </button>
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">IA Pratique</h1>
+                    <p class="text-gray-600 text-sm md:text-base">Maîtrise l'IA et gagne de l'argent en 24h</p>
+                </div>
             </div>
         </div>
 
         <!-- Navigation -->
-        <div class="flex flex-wrap gap-2 mb-6" id="navTabs">
-            <button onclick="showTab('accueil')" class="nav-btn active flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all">
+        <div class="flex flex-wrap gap-2 mb-6">
+            <button onclick="showTab('accueil')" class="nav-btn active flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
                 🏠 <span class="hidden sm:inline">Accueil</span>
             </button>
-            <button onclick="showTab('top10')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all">
+            <button onclick="showTab('top10')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
                 ⭐ <span class="hidden sm:inline">Top 10 IA</span>
             </button>
-            <button onclick="showTab('commander')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all">
+            <button onclick="showTab('commander')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
                 💳 <span class="hidden sm:inline">Commander</span>
             </button>
-            <button onclick="showTab('tiktok')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all">
+            <button onclick="showTab('tiktok')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
                 📱 <span class="hidden sm:inline">Stratégie</span>
             </button>
-            <button onclick="showTab('branding')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all">
+            <button onclick="showTab('branding')" class="nav-btn flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all bg-white text-gray-700 hover:shadow-md">
                 🎯 <span class="hidden sm:inline">Positionnement</span>
             </button>
         </div>
 
         <!-- Content -->
-        <div class="rounded-2xl shadow-xl p-6 md:p-8 transition-colors duration-300" id="content">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
             
             <!-- ACCUEIL -->
             <div id="tab-accueil" class="tab-content active space-y-8">
                 <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4" id="mainTitle">L'IA gratuite qui te fait gagner de l'argent en 24h</h2>
-                    <p class="text-xl" id="mainSubtitle">Zéro compétence. Zéro investissement. Que du concret.</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">L'IA gratuite qui te fait gagner de l'argent en 24h</h2>
+                    <p class="text-xl text-gray-600">Zéro compétence. Zéro investissement. Que du concret.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="rounded-xl p-6 text-center border-2 transition-colors" id="card1">
+                    <div class="bg-green-50 rounded-xl p-6 text-center border-2 border-green-200">
                         <div class="text-5xl mb-4">💰</div>
-                        <h3 class="text-2xl font-bold mb-2" id="cardTitle1">Services IA</h3>
-                        <p class="mb-3" id="cardDesc1">Articles 10-25€ en 24h</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Services IA</h3>
+                        <p class="text-gray-700 mb-3">Articles 10-25€ en 24h</p>
                         <button onclick="showTab('commander')" class="bg-green-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-green-700">Commander</button>
                     </div>
-                    <div class="rounded-xl p-6 text-center border-2 transition-colors" id="card2">
+                    <div class="bg-purple-50 rounded-xl p-6 text-center border-2 border-purple-200">
                         <div class="text-5xl mb-4">📱</div>
-                        <h3 class="text-2xl font-bold mb-2" id="cardTitle2">Stratégie TikTok</h3>
-                        <p class="mb-3" id="cardDesc2">Apprends à créer du contenu viral</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Stratégie TikTok</h3>
+                        <p class="text-gray-700 mb-3">Apprends à créer du contenu viral</p>
                         <button onclick="showTab('tiktok')" class="bg-purple-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-purple-700">Voir stratégie</button>
                     </div>
                 </div>
-                <div class="rounded-xl p-8 text-center transition-colors" id="benefitsBox">
-                    <h3 class="text-2xl font-bold mb-4" id="benefitsTitle">🎯 Ce que tu obtiens</h3>
+                <div class="bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-8 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">🎯 Ce que tu obtiens</h3>
                     <div class="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
-                        <div class="rounded-lg p-4" id="benefit1">
-                            <h4 class="font-bold mb-2">🚀 Top 10 Outils IA</h4>
-                            <p class="text-sm" id="benefit1Desc">Les meilleurs outils gratuits pour créer du contenu</p>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-gray-800 mb-2">🚀 Top 10 Outils IA</h4>
+                            <p class="text-sm text-gray-600">Les meilleurs outils gratuits pour créer du contenu</p>
                         </div>
-                        <div class="rounded-lg p-4" id="benefit2">
-                            <h4 class="font-bold mb-2">📝 Services personnalisés</h4>
-                            <p class="text-sm" id="benefit2Desc">Articles et guides sur mesure en 24-48h</p>
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-gray-800 mb-2">📝 Services personnalisés</h4>
+                            <p class="text-sm text-gray-600">Articles et guides sur mesure en 24-48h</p>
                         </div>
                     </div>
                 </div>
@@ -94,15 +89,15 @@
 
             <!-- TOP 10 -->
             <div id="tab-top10" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-center mb-6" id="top10Title">Top 10 Outils IA Gratuits 2026</h2>
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">Top 10 Outils IA Gratuits 2026</h2>
                 <div id="toolsList"></div>
             </div>
 
             <!-- COMMANDER -->
             <div id="tab-commander" class="tab-content max-w-3xl mx-auto space-y-6">
                 <div class="text-center mb-8">
-                    <h2 class="text-4xl font-bold mb-3" id="orderTitle">💳 Commander un Service IA</h2>
-                    <p class="text-lg" id="orderSubtitle">Livraison 24-48h • Paiement PayPal</p>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-3">💳 Commander un Service IA</h2>
+                    <p class="text-lg text-gray-600">Livraison 24-48h • Paiement PayPal</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-4 mb-8">
                     <div class="bg-blue-50 rounded-xl p-6 border-2 border-blue-300 text-center">
@@ -124,17 +119,17 @@
                         <ul class="text-sm text-left space-y-1"><li>• 5 articles</li><li>• 72h</li><li>• -10€</li></ul>
                     </div>
                 </div>
-                <form onsubmit="handleSubmit(event)" class="rounded-xl p-8 transition-colors" id="orderForm">
-                    <h3 class="text-2xl font-bold mb-6">📝 Formulaire</h3>
+                <form onsubmit="handleSubmit(event)" class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">📝 Formulaire</h3>
                     <div class="space-y-4">
-                        <input type="text" required placeholder="Nom" class="w-full px-4 py-3 border-2 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="nom">
-                        <input type="email" required placeholder="Email" class="w-full px-4 py-3 border-2 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="email">
-                        <select class="w-full px-4 py-3 border-2 rounded-lg bg-white text-gray-900" id="service">
+                        <input type="text" required placeholder="Nom" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="nom">
+                        <input type="email" required placeholder="Email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="email">
+                        <select class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900" id="service">
                             <option value="article">Article - 10€</option>
                             <option value="guide">Guide - 25€</option>
                             <option value="pack">Pack 5 - 40€</option>
                         </select>
-                        <textarea required rows="4" placeholder="Description projet..." class="w-full px-4 py-3 border-2 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="desc"></textarea>
+                        <textarea required rows="4" placeholder="Description projet..." class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500" id="desc"></textarea>
                         <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl">Payer avec PayPal</button>
                     </div>
                 </form>
@@ -142,71 +137,71 @@
 
             <!-- TIKTOK -->
             <div id="tab-tiktok" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-center mb-6" id="tiktokTitle">📱 Stratégie TikTok pour l'IA</h2>
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">📱 Stratégie TikTok pour l'IA</h2>
                 <div class="bg-pink-100 rounded-xl p-8">
                     <h3 class="text-2xl font-bold mb-4">🎯 Pourquoi TikTok ?</h3>
                     <p class="text-lg">TikTok est la plateforme idéale pour partager des astuces IA courtes et impactantes. Un contenu bien fait peut toucher des milliers de personnes rapidement.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">📹 Vidéos qui cartonnent</h3>
-                        <ul class="space-y-2">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">📹 Vidéos qui cartonnent</h3>
+                        <ul class="space-y-2 text-gray-700">
                             <li class="flex gap-2"><span class="text-purple-600">✓</span><span>"Top 5 IA gratuites"</span></li>
                             <li class="flex gap-2"><span class="text-purple-600">✓</span><span>"Je gagne X€ avec IA"</span></li>
                             <li class="flex gap-2"><span class="text-purple-600">✓</span><span>"Before/After IA"</span></li>
                             <li class="flex gap-2"><span class="text-purple-600">✓</span><span>"Tuto 30 secondes"</span></li>
                         </ul>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">🔥 Hooks</h3>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">🔥 Hooks</h3>
                         <div class="space-y-2">
-                            <div class="bg-blue-50 p-3 rounded">"Arrête de payer pour X"</div>
-                            <div class="bg-blue-50 p-3 rounded">"J'ai testé 10 IA..."</div>
-                            <div class="bg-blue-50 p-3 rounded">"Cette IA fait en 5min..."</div>
-                            <div class="bg-blue-50 p-3 rounded">"Personne ne parle de..."</div>
+                            <div class="bg-blue-50 p-3 rounded text-gray-800">"Arrête de payer pour X"</div>
+                            <div class="bg-blue-50 p-3 rounded text-gray-800">"J'ai testé 10 IA..."</div>
+                            <div class="bg-blue-50 p-3 rounded text-gray-800">"Cette IA fait en 5min..."</div>
+                            <div class="bg-blue-50 p-3 rounded text-gray-800">"Personne ne parle de..."</div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-purple-50 rounded-xl p-6 text-center">
-                    <h4 class="font-bold text-xl mb-3">📊 Conseils pour réussir</h4>
+                    <h4 class="font-bold text-gray-800 text-xl mb-3">📊 Conseils pour réussir</h4>
                     <div class="grid grid-cols-3 gap-4">
-                        <div><p class="text-3xl font-bold text-purple-600">Régularité</p><p class="text-sm">Poste tous les jours</p></div>
-                        <div><p class="text-3xl font-bold text-purple-600">Qualité</p><p class="text-sm">Contenu utile</p></div>
-                        <div><p class="text-3xl font-bold text-purple-600">Engagement</p><p class="text-sm">Réponds aux commentaires</p></div>
+                        <div><p class="text-3xl font-bold text-purple-600">Régularité</p><p class="text-sm text-gray-700">Poste tous les jours</p></div>
+                        <div><p class="text-3xl font-bold text-purple-600">Qualité</p><p class="text-sm text-gray-700">Contenu utile</p></div>
+                        <div><p class="text-3xl font-bold text-purple-600">Engagement</p><p class="text-sm text-gray-700">Réponds aux commentaires</p></div>
                     </div>
                 </div>
             </div>
 
             <!-- BRANDING -->
             <div id="tab-branding" class="tab-content space-y-6">
-                <h2 class="text-4xl font-bold text-center mb-6" id="brandTitle">🎯 Positionnement de Marque</h2>
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-6">🎯 Positionnement de Marque</h2>
                 <div class="bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold mb-4">Mission</h3>
-                    <p class="text-lg">Rendre l'IA accessible et profitable pour tous, sans barrière technique ni financière.</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Mission</h3>
+                    <p class="text-lg text-gray-700">Rendre l'IA accessible et profitable pour tous, sans barrière technique ni financière.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">✅ On EST</h3>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">✅ On EST</h3>
                         <ul class="space-y-2 text-sm">
-                            <li class="bg-green-50 p-3 rounded">Direct et honnête</li>
-                            <li class="bg-green-50 p-3 rounded">Simple et accessible</li>
-                            <li class="bg-green-50 p-3 rounded">Action immédiate</li>
-                            <li class="bg-green-50 p-3 rounded">Motivant sans BS</li>
+                            <li class="bg-green-50 p-3 rounded text-gray-800">Direct et honnête</li>
+                            <li class="bg-green-50 p-3 rounded text-gray-800">Simple et accessible</li>
+                            <li class="bg-green-50 p-3 rounded text-gray-800">Action immédiate</li>
+                            <li class="bg-green-50 p-3 rounded text-gray-800">Motivant sans BS</li>
                         </ul>
                     </div>
-                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg">
-                        <h3 class="text-xl font-bold mb-4">❌ On N'EST PAS</h3>
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">❌ On N'EST PAS</h3>
                         <ul class="space-y-2 text-sm">
-                            <li class="bg-red-50 p-3 rounded">Technique compliqué</li>
-                            <li class="bg-red-50 p-3 rounded">Promesses irréalistes</li>
-                            <li class="bg-red-50 p-3 rounded">Corporate froid</li>
-                            <li class="bg-red-50 p-3 rounded">Condescendant</li>
+                            <li class="bg-red-50 p-3 rounded text-gray-800">Technique compliqué</li>
+                            <li class="bg-red-50 p-3 rounded text-gray-800">Promesses irréalistes</li>
+                            <li class="bg-red-50 p-3 rounded text-gray-800">Corporate froid</li>
+                            <li class="bg-red-50 p-3 rounded text-gray-800">Condescendant</li>
                         </ul>
                     </div>
                 </div>
                 <div class="bg-green-100 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold mb-3">🎁 Proposition Unique</h3>
-                    <p class="text-xl font-medium">"L'IA gratuite qui te fait gagner de l'argent en 24h - sans compétence, sans investissement"</p>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3">🎁 Proposition Unique</h3>
+                    <p class="text-xl font-medium text-gray-800">"L'IA gratuite qui te fait gagner de l'argent en 24h - sans compétence, sans investissement"</p>
                 </div>
             </div>
 
@@ -232,19 +227,17 @@
             { rank: 10, name: "Runway ML", url: "https://runwayml.com", logo: "🎬", atouts: ["Vidéo IA", "Texte→Vidéo", "Effets auto", "Gratuit"] }
         ];
 
-        let darkMode = false;
-
         function renderTools() {
             const container = document.getElementById('toolsList');
             container.innerHTML = tools.map(t => `
-                <div class="rounded-xl p-6 hover:shadow-xl transition-all border-2 ${darkMode ? 'bg-gray-700 hover:border-purple-500' : 'bg-gray-50 hover:border-purple-200'}">
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all border-2 hover:border-purple-200">
                     <div class="flex gap-4 flex-wrap">
                         <div class="flex items-center gap-3">
                             <div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white font-bold text-2xl w-12 h-12 rounded-full flex items-center justify-center">${t.rank}</div>
                             <div class="text-5xl">${t.logo}</div>
                         </div>
                         <div class="flex-1">
-                            <a href="${t.url}" target="_blank" class="text-2xl font-bold ${darkMode ? 'text-white hover:text-purple-400' : 'text-gray-800 hover:text-purple-600'} inline-flex items-center gap-2">
+                            <a href="${t.url}" target="_blank" class="text-2xl font-bold text-gray-800 hover:text-purple-600 inline-flex items-center gap-2">
                                 ${t.name} 
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -253,7 +246,7 @@
                                 </svg>
                             </a>
                             <div class="grid md:grid-cols-2 gap-2 mt-3 mb-4">
-                                ${t.atouts.map(a => `<div class="flex gap-2"><span class="text-purple-500">✓</span><span class="text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}">${a}</span></div>`).join('')}
+                                ${t.atouts.map(a => `<div class="flex gap-2"><span class="text-purple-500">✓</span><span class="text-sm text-gray-700">${a}</span></div>`).join('')}
                             </div>
                             <a href="${t.url}" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg">
                                 Essayer
@@ -266,71 +259,14 @@
 
         function showTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => {
+                b.classList.remove('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white', 'shadow-lg');
+                b.classList.add('bg-white', 'text-gray-700', 'hover:shadow-md');
+            });
             document.getElementById('tab-' + tabName).classList.add('active');
-            event.target.closest('.nav-btn').classList.add('active');
+            event.target.closest('.nav-btn').classList.remove('bg-white', 'text-gray-700', 'hover:shadow-md');
+            event.target.closest('.nav-btn').classList.add('active', 'bg-gradient-to-r', 'from-blue-600', 'to-purple-600', 'text-white', 'shadow-lg');
             if (tabName === 'top10') renderTools();
-        }
-
-        function toggleDarkMode() {
-            darkMode = !darkMode;
-            const body = document.getElementById('mainBody');
-            const header = document.getElementById('header');
-            const content = document.getElementById('content');
-            const themeBtn = document.getElementById('themeBtn');
-            const themeIcon = document.getElementById('themeIcon');
-            const themeText = document.getElementById('themeText');
-            
-            if (darkMode) {
-                body.classList.add('bg-gray-900');
-                body.classList.remove('bg-gradient-to-br', 'from-blue-50', 'via-purple-50', 'to-pink-50');
-                header.classList.add('bg-gray-800');
-                header.classList.remove('bg-white');
-                content.classList.add('bg-gray-800', 'text-gray-100');
-                content.classList.remove('bg-white');
-                themeBtn.classList.add('bg-yellow-500', 'text-gray-900');
-                themeBtn.classList.remove('bg-gray-800', 'text-white');
-                themeIcon.textContent = '☀️';
-                themeText.textContent = 'Light';
-                
-                document.querySelectorAll('.nav-btn').forEach(btn => {
-                    if (!btn.classList.contains('active')) {
-                        btn.classList.add('bg-gray-800', 'text-gray-200');
-                        btn.classList.remove('bg-white', 'text-gray-700');
-                    }
-                });
-                
-                document.getElementById('subtitle').classList.add('text-gray-300');
-                document.getElementById('mainTitle').classList.add('text-white');
-                document.getElementById('mainSubtitle').classList.add('text-gray-300');
-                
-            } else {
-                body.classList.remove('bg-gray-900');
-                body.classList.add('bg-gradient-to-br', 'from-blue-50', 'via-purple-50', 'to-pink-50');
-                header.classList.remove('bg-gray-800');
-                header.classList.add('bg-white');
-                content.classList.remove('bg-gray-800', 'text-gray-100');
-                content.classList.add('bg-white');
-                themeBtn.classList.remove('bg-yellow-500', 'text-gray-900');
-                themeBtn.classList.add('bg-gray-800', 'text-white');
-                themeIcon.textContent = '🌙';
-                themeText.textContent = 'Dark';
-                
-                document.querySelectorAll('.nav-btn').forEach(btn => {
-                    if (!btn.classList.contains('active')) {
-                        btn.classList.remove('bg-gray-800', 'text-gray-200');
-                        btn.classList.add('bg-white', 'text-gray-700');
-                    }
-                });
-                
-                document.getElementById('subtitle').classList.remove('text-gray-300');
-                document.getElementById('mainTitle').classList.remove('text-white');
-                document.getElementById('mainSubtitle').classList.remove('text-gray-300');
-            }
-            
-            if (document.getElementById('tab-top10').classList.contains('active')) {
-                renderTools();
-            }
         }
 
         function handleSubmit(event) {
@@ -338,13 +274,6 @@
             const email = document.getElementById('email').value;
             alert('Commande envoyée à ' + email + ' ! Redirection vers PayPal...');
         }
-
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
 
         renderTools();
     </script>
